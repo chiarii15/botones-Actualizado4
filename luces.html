@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="stlye.css">
+     <link rel="icon" type="image/png" sizes="16x16" href="./logo luz/favicon-16x16.png">
+    <title>LUCES</title>
+    <script src="./componentes.js"></script>
+</head>
+<body>
+  <arduino-usb id="arduino"></arduino-usb>
+ <header class="arriba">  
+  <h2 id="tluces">Luces</h2>
+  <div class="botonera">
+    <button id="botonArduino" class="botonesArduino">Conectar arduino</button>
+    &nbsp; 
+    <button id="botonArduino2" class="botonesArduino">Desconectar arduino</button>
+  </div>
+ </header>
+    <div class="botones">
+      <button id="botonLuzon" class="boton">ENCENDER</button>
+      <br>
+      <br>
+      <button id="botonLuzoff" class="boton">APAGAR</button>
+      <button onclick="arduino.enviar('1')">Manual</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="idfooter" class="footer">
+      <a class="Atras " href="archivo.html">Atrás</a>
+      <img class="foto" src="Logo Normal - DOMOTICS.png" alt="">
+     <a class="Atras" href="ventilador.html">Ventilador</a>
+    </div>
+      <br>
+    <script>
+      botonLuzon.onclick = fnEnviar3
+      botonLuzoff.onclick = fnEnviar4
+  
+      function fnEnviar3(){ 
+        console.log("encender luces");
+        arduino.enviar("a")
+      }
+        function fnEnviar4(){ 
+        console.log("apagar luces");
+        arduino.enviar("b")
+    } 
+    botonArduino.onclick = fnEnviar5;
+    function fnEnviar5()
+    {
+    arduino.conectar()
+    this.style.background = "green"
+     }
+     botonArduino2.onclick = fnEnviar6;
+    function fnEnviar6()
+    {
+      arduino.enviar('0');
+    arduino.desconectar()
+    botonArduino.style.background = "red"
+     }
+     arduino.suscribir(fnRecibir);
+     function fnRecibir(texto){
+    console.log("valor: " + texto)
+     }
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="stlye.css">
+     <link rel="icon" type="image/png" sizes="16x16" href="./logo ventilador/favicon-16x16.png">
+    <title>Ventilador</title>
+    <script src="./componentes.js"></script>
+</head>
+<body>
+  <arduino-usb id="arduino2"></arduino-usb>
+    <header class="arriba">
+    <h2>Ventilador</h2>
+    <div class="botonera">
+    <button id="botonArduinoOn" class="botonesArduino">Conectar arduino
+    </button>
+    &nbsp; 
+    <button id="botonArduinoOff" class="botonesArduino">Desconectar arduino</button>
+    </div>
+  </header>
+    <div class="botones">
+      <button id="botonVenton" class="boton">ENCENDER</button>
+      <br>
+      <br>
+      <button id="botonVentoff" class="boton">APAGAR</button>
+      <button onclick="arduino.enviar('1')">Manual</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+      <a class="Atras" href="archivo.html">Atrás</a>
+      <img class="foto" src="Logo Normal - DOMOTICS.png" alt="">
+     <a class="Atras" href="luces.html">Luces</a>
+    </div>
+      <br>
+    <script>
+      botonVenton.onclick = fnEnviar1
+      botonVentoff.onclick = fnEnviar2
+  
+      function fnEnviar1(){ 
+        console.log("encender ventilador");
+        arduino2.enviar("c")
+      }
+        function fnEnviar2(){ 
+        console.log("apagar ventilador");
+        arduino2.enviar("d")
+
+    } 
+    botonArduinoOn.onclick = fnEnviar6;
+    function fnEnviar6()
+    {
+    arduino2.conectar()
+    this.style.background = "green"
+     }
+     botonArduinoOff.onclick = fnEnviar7;
+    function fnEnviar7()
+    {
+      arduino.enviar('0');
+    arduino2.desconectar()
+    botonArduinoOn.style.background = "red"
+     }
+     arduino2.suscribir(fnRecibir);
+     function fnRecibir(texto){
+    console.log("valor: " + texto)
+     }
+ 
+</script>
+</body>
+</html>

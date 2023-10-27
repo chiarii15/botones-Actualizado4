@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+body
+{
+    background-image: url(domo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+}
+#tluces{
+    margin-right: 95px;
+}
+#botonArduino{
+    margin-left: 76px;
+}
+#botonArduino2{
+    margin-left: 40px;
+}
+#botonArduinoOn{
+    margin-left: 76px;
+}
+#botonArduinoOff{
+    margin-left: 40px;
+}
+.botonesArduino{
+    display: flex;
+    font-size: 29px;
+    padding: 5px;
+
+}
+.botonera{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+
+}
+.arriba{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+h1{
+display: flex;
+background-color: rgb(111 173 188);
+font-size: 44px;
+padding: 4px;
+
+}
+.titulo{
+    display: flex;
+    padding-top: 22px;
+    padding-left: 6px;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7%;
+}
+.botones1{
+    display: flex;
+    padding-top: 15%;
+    flex-direction: column;
+    align-items: center;
+}
+.boton{
+    padding: 22px;
+    font-size: 64px;
+    background-color: #5b717f;
+}
+h2{
+    display: inline;
+    font-size: 50px;
+    background-color: rgb(61, 58, 58);
+    color: rgb(8, 160, 230);
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-left: 4px;
+}
+.a1{
+    padding: 22px;
+    font-size: 64px;
+    background-color: #237c75;
+    text-decoration: none;
+    color: black;
+}
+.Atras{
+    display: inline;
+    font-size: 40px;
+    color: black;
+    background-color: rgb(8, 160, 230);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 3px;
+    align-items: center;
+}
+.footerMenu{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 3px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#idfooter{
+    margin-left: 12px;
+}
+.foto{
+    display: flex;
+  height: 25%;
+  width: 15%;
+  background-color: rgb(59, 59, 59);
+  justify-content: center;
+}
